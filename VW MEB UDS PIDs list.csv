@@ -162,7 +162,7 @@ Ready;climate;CO2 content interior;ppm;UDS SID;0x00000746 03 22 42 db 55 55 55 5
 Ready;climate;Inside temperature;°C;UDS SID;0x00000746 03 22 26 13 55 55 55 55;00;00000746;03 22 26 13 55 55 55 55;0x000007b0 05 62 26 13 XX YY aa aa;000007b0;05 62 26 13 XX YY aa aa;(XX*2^8+YY)/5-40= inside temperature;
 Ready;climate;Recirculation of air;logic;UDS SID;0x00000746 03 22 26 3b 55 55 55 55;00;00000746;03 22 26 3b 55 55 55 55;0x000007b0 04 62 26 3b XX aa aa aa;000007b0;04 62 26 3b XX aa aa aa;XX=00 -> fresh air, XX=04 -> manual recirculation;
 Ready;Electrical;12V battery voltage;V;UDS SID;0x00000710 03 22 2a f7 55 55 55 55;00;00000710;03 22 2a f7 55 55 55 55;multiframe;ltiframe;multiframe;B1B2/1024+4,26=12V voltage;
-Ready;Battery;SOC (HMI);%;calculation;;;;;;;;SoC(BMS)*51/46-6,4 = SOC (HMI);
+Ready;Battery;SOC (HMI);%;calculation;;;;;;;;SoC(BMS)*51/46-6,4 = SOC(HMI) except for the 45kWh battery, where SoC(BMS)*1.2625-9.0947 = SOC(HMI) is more accurate;
 need to logg;Electrical;12V Battery temp;°C;UDS SID;;;;;;;;;
 need to logg;Electrical;Charging socket temp 1;°C;UDS SID;;;;;;;;;
 need to logg;Electrical;Charging socket temp 2;°C;UDS SID;;;;;;;;;
